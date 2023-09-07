@@ -1,0 +1,1010 @@
+Script started on 2023-09-07 00:36:21-03:00 [TERM="xterm-256color" TTY="/dev/pts/30" COLUMNS="100" LINES="11"]
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --versionsudo apt install valgrind[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvalgrind --leak-check=full ./cc[K11.ou
+[?2004lvalgrind: ./c11.ou: No such file or directory
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c11.out
+[?2004l==1121== Memcheck, a memory error detector
+==1121== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1121== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1121== Command: ./c11.out
+==1121== 
+==1121== error calling PR_SET_PTRACER, vgdb might block
+==1121== Invalid write of size 2
+==1121==    at 0x1091B4: main (c11.c:9)
+==1121==  Address 0x4a8b048 is 0 bytes after a block of size 8 alloc'd
+==1121==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x10919E: main (c11.c:8)
+==1121== 
+==1121== Invalid read of size 1
+==1121==    at 0x484ED84: __strlen_sse2 (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x48D6DB0: __vfprintf_internal (vfprintf-internal.c:1517)
+==1121==    by 0x48C081E: printf (printf.c:33)
+==1121==    by 0x1091E2: main (c11.c:11)
+==1121==  Address 0x4a8b048 is 0 bytes after a block of size 8 alloc'd
+==1121==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x10919E: main (c11.c:8)
+==1121== 
+==1121== Invalid read of size 1
+==1121==    at 0x48EB7B4: _IO_new_file_xsputn (fileops.c:1218)
+==1121==    by 0x48EB7B4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==1121==    by 0x48D708B: outstring_func (vfprintf-internal.c:239)
+==1121==    by 0x48D708B: __vfprintf_internal (vfprintf-internal.c:1517)
+==1121==    by 0x48C081E: printf (printf.c:33)
+==1121==    by 0x1091E2: main (c11.c:11)
+==1121==  Address 0x4a8b048 is 0 bytes after a block of size 8 alloc'd
+==1121==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x10919E: main (c11.c:8)
+==1121== 
+==1121== Invalid read of size 1
+==1121==    at 0x48534C8: mempcpy (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x48EB6E4: _IO_new_file_xsputn (fileops.c:1235)
+==1121==    by 0x48EB6E4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+==1121==    by 0x48D708B: outstring_func (vfprintf-internal.c:239)
+==1121==    by 0x48D708B: __vfprintf_internal (vfprintf-internal.c:1517)
+==1121==    by 0x48C081E: printf (printf.c:33)
+==1121==    by 0x1091E2: main (c11.c:11)
+==1121==  Address 0x4a8b048 is 0 bytes after a block of size 8 alloc'd
+==1121==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x10919E: main (c11.c:8)
+==1121== 
+1121, Rolberton
+==1121== 
+==1121== HEAP SUMMARY:
+==1121==     in use at exit: 8 bytes in 1 blocks
+==1121==   total heap usage: 2 allocs, 1 frees, 1,032 bytes allocated
+==1121== 
+==1121== 8 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1121==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1121==    by 0x10919E: main (c11.c:8)
+==1121== 
+==1121== LEAK SUMMARY:
+==1121==    definitely lost: 8 bytes in 1 blocks
+==1121==    indirectly lost: 0 bytes in 0 blocks
+==1121==      possibly lost: 0 bytes in 0 blocks
+==1121==    still reachable: 0 bytes in 0 blocks
+==1121==         suppressed: 0 bytes in 0 blocks
+==1121== 
+==1121== For lists of detected and suppressed errors, rerun with: -s
+==1121== ERROR SUMMARY: 7 errors from 5 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c11.out[K[K[K[Kc.out
+[?2004l==1122== Memcheck, a memory error detector
+==1122== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1122== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1122== Command: ./c11c.out
+==1122== 
+==1122== error calling PR_SET_PTRACER, vgdb might block
+1122, Rolberton
+==1122== 
+==1122== HEAP SUMMARY:
+==1122==     in use at exit: 0 bytes in 0 blocks
+==1122==   total heap usage: 2 allocs, 2 frees, 1,034 bytes allocated
+==1122== 
+==1122== All heap blocks were freed -- no leaks are possible
+==1122== 
+==1122== For lists of detected and suppressed errors, rerun with: -s
+==1122== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ script done.
+[?2004lScript started, output log file is 'done.'.
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.c [K[Kout c12.c 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [6Pvalgrind --versionsudo apt install valgrind[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvalgrind --leak-check=full /[K./c12.out 
+[?2004l==1135== Memcheck, a memory error detector
+==1135== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1135== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1135== Command: ./c12.out
+==1135== 
+==1135== error calling PR_SET_PTRACER, vgdb might block
+==1135== Conditional jump or move depends on uninitialised value(s)
+==1135==    at 0x109159: main (c12.c:6)
+==1135== 
+X is zero==1135== 
+==1135== HEAP SUMMARY:
+==1135==     in use at exit: 0 bytes in 0 blocks
+==1135==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1135== 
+==1135== All heap blocks were freed -- no leaks are possible
+==1135== 
+==1135== Use --track-origins=yes to see where uninitialised values come from
+==1135== For lists of detected and suppressed errors, rerun with: -s
+==1135== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c12.out [13Pgcc -g -o c12.out c12.c[C
+[?2004l[01m[Kc12.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kc12.c:6:12:[m[K [01;31m[Kerror: [m[Kexpected expression before ‘[01m[K=[m[K’ token
+    6 |     if(x ==[01;31m[K=[m[K 0) {
+      |            [01;31m[K^[m[K
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [13@valgrind --leak-check=full ./c12.out[C
+[?2004l==1138== Memcheck, a memory error detector
+==1138== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1138== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1138== Command: ./c12.out
+==1138== 
+==1138== error calling PR_SET_PTRACER, vgdb might block
+==1138== Conditional jump or move depends on uninitialised value(s)
+==1138==    at 0x109159: main (c12.c:6)
+==1138== 
+X is zero==1138== 
+==1138== HEAP SUMMARY:
+==1138==     in use at exit: 0 bytes in 0 blocks
+==1138==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1138== 
+==1138== All heap blocks were freed -- no leaks are possible
+==1138== 
+==1138== Use --track-origins=yes to see where uninitialised values come from
+==1138== For lists of detected and suppressed errors, rerun with: -s
+==1138== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c12.out [13Pgcc -g -o c12.out c12.c[C
+[?2004l[01m[Kc12.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kc12.c:9:5:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kfree[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+    9 |     [01;35m[Kfree[m[K(x);
+      |     [01;35m[K^~~~[m[K
+[01m[Kc12.c:2:1:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdlib.h>[m[K’ or provide a declaration of ‘[01m[Kfree[m[K’
+    1 | #include <stdio.h>
+  +++ |+[32m[K#include <stdlib.h>[m[K
+    2 | 
+[01m[Kc12.c:9:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kfree[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wbuiltin-declaration-mismatch-Wbuiltin-declaration-mismatch]8;;[m[K]
+    9 |     [01;35m[Kfree[m[K(x);
+      |     [01;35m[K^~~~[m[K
+[01m[Kc12.c:9:5:[m[K [01;36m[Knote: [m[Kinclude ‘[01m[K<stdlib.h>[m[K’ or provide a declaration of ‘[01m[Kfree[m[K’
+
+[01m[Kc12.c:9:10:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfree[m[K’ makes pointer from integer without a cast [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+    9 |     free([01;35m[Kx[m[K);
+      |          [01;35m[K^[m[K
+      |          [01;35m[K|[m[K
+      |          [01;35m[Kint[m[K
+[01m[Kc12.c:9:10:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kvoid *[m[K’ but argument is of type ‘[01m[Kint[m[K’
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [13@valgrind --leak-check=full ./c12.out[C
+[?2004l==1144== Memcheck, a memory error detector
+==1144== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1144== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1144== Command: ./c12.out
+==1144== 
+==1144== error calling PR_SET_PTRACER, vgdb might block
+==1144== Conditional jump or move depends on uninitialised value(s)
+==1144==    at 0x109179: main (c12.c:6)
+==1144== 
+==1144== Conditional jump or move depends on uninitialised value(s)
+==1144==    at 0x484B235: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1144==    by 0x10919B: main (c12.c:9)
+==1144== 
+X is zero==1144== 
+==1144== HEAP SUMMARY:
+==1144==     in use at exit: 0 bytes in 0 blocks
+==1144==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1144== 
+==1144== All heap blocks were freed -- no leaks are possible
+==1144== 
+==1144== Use --track-origins=yes to see where uninitialised values come from
+==1144== For lists of detected and suppressed errors, rerun with: -s
+==1144== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c12.out [13Pgcc -g -o c12.out c12.c[C
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [13@valgrind --leak-check=full ./c12.out[C
+[?2004l==1150== Memcheck, a memory error detector
+==1150== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1150== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1150== Command: ./c12.out
+==1150== 
+==1150== error calling PR_SET_PTRACER, vgdb might block
+X is zero==1150== 
+==1150== HEAP SUMMARY:
+==1150==     in use at exit: 0 bytes in 0 blocks
+==1150==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1150== 
+==1150== All heap blocks were freed -- no leaks are possible
+==1150== 
+==1150== For lists of detected and suppressed errors, rerun with: -s
+==1150== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c12.out [13Pgcc -g -o c12.out c12.c[C
+[?2004l
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [13@valgrind --leak-check=full ./c12.out[C
+[?2004l==1156== Memcheck, a memory error detector
+==1156== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1156== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1156== Command: ./c12.out
+==1156== 
+==1156== error calling PR_SET_PTRACER, vgdb might block
+==1156== Conditional jump or move depends on uninitialised value(s)
+==1156==    at 0x109159: main (c12.c:6)
+==1156== 
+X is zero==1156== 
+==1156== HEAP SUMMARY:
+==1156==     in use at exit: 0 bytes in 0 blocks
+==1156==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1156== 
+==1156== All heap blocks were freed -- no leaks are possible
+==1156== 
+==1156== Use --track-origins=yes to see where uninitialised values come from
+==1156== For lists of detected and suppressed errors, rerun with: -s
+==1156== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c12.out [13Pgcc -g -o c12.out c12.c[C
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c12.out c12.c [13@valgrind --leak-check=full ./c12.out[C
+[?2004l==1162== Memcheck, a memory error detector
+==1162== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1162== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1162== Command: ./c12.out
+==1162== 
+==1162== error calling PR_SET_PTRACER, vgdb might block
+X is zero==1162== 
+==1162== HEAP SUMMARY:
+==1162==     in use at exit: 0 bytes in 0 blocks
+==1162==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1162== 
+==1162== All heap blocks were freed -- no leaks are possible
+==1162== 
+==1162== For lists of detected and suppressed errors, rerun with: -s
+==1162== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -p[K[K-g -o c13.out c13.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c13.out
+[?2004l==1168== Memcheck, a memory error detector
+==1168== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1168== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1168== Command: ./c13.out
+==1168== 
+==1168== error calling PR_SET_PTRACER, vgdb might block
+==1168== 
+==1168== HEAP SUMMARY:
+==1168==     in use at exit: 35 bytes in 2 blocks
+==1168==   total heap usage: 3 allocs, 1 frees, 47 bytes allocated
+==1168== 
+==1168== 16 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1168==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1168==    by 0x1091A6: main (c13.c:11)
+==1168== 
+==1168== 19 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==1168==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1168==    by 0x10917E: main (c13.c:8)
+==1168== 
+==1168== LEAK SUMMARY:
+==1168==    definitely lost: 35 bytes in 2 blocks
+==1168==    indirectly lost: 0 bytes in 0 blocks
+==1168==      possibly lost: 0 bytes in 0 blocks
+==1168==    still reachable: 0 bytes in 0 blocks
+==1168==         suppressed: 0 bytes in 0 blocks
+==1168== 
+==1168== For lists of detected and suppressed errors, rerun with: -s
+==1168== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c13.out[13Pgcc -g -o c13.out c13.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c13.out c13.cvalgrind --leak-check=full ./c13.out
+[?2004l==1174== Memcheck, a memory error detector
+==1174== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1174== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1174== Command: ./c13.out
+==1174== 
+
+==1174== error calling PR_SET_PTRACER, vgdb might block
+==1174== 
+==1174== HEAP SUMMARY:
+==1174==     in use at exit: 31 bytes in 2 blocks
+==1174==   total heap usage: 3 allocs, 1 frees, 47 bytes allocated
+==1174== 
+==1174== 12 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1174==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1174==    by 0x10918C: main (c13.c:9)
+==1174== 
+==1174== 19 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==1174==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1174==    by 0x10917E: main (c13.c:8)
+==1174== 
+==1174== LEAK SUMMARY:
+==1174==    definitely lost: 31 bytes in 2 blocks
+==1174==    indirectly lost: 0 bytes in 0 blocks
+==1174==      possibly lost: 0 bytes in 0 blocks
+==1174==    still reachable: 0 bytes in 0 blocks
+==1174==         suppressed: 0 bytes in 0 blocks
+==1174== 
+==1174== For lists of detected and suppressed errors, rerun with: -s
+==1174== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c13.out[13Pgcc -g -o c13.out c13.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c13.out c13.cvalgrind --leak-check=full ./c13.out
+[?2004l==1180== Memcheck, a memory error detector
+==1180== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1180== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1180== Command: ./c13.out
+==1180== 
+==1180== error calling PR_SET_PTRACER, vgdb might block
+==1180== 
+==1180== HEAP SUMMARY:
+==1180==     in use at exit: 19 bytes in 1 blocks
+==1180==   total heap usage: 3 allocs, 2 frees, 47 bytes allocated
+==1180== 
+==1180== 19 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1180==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1180==    by 0x10917E: main (c13.c:8)
+==1180== 
+==1180== LEAK SUMMARY:
+==1180==    definitely lost: 19 bytes in 1 blocks
+==1180==    indirectly lost: 0 bytes in 0 blocks
+==1180==      possibly lost: 0 bytes in 0 blocks
+==1180==    still reachable: 0 bytes in 0 blocks
+==1180==         suppressed: 0 bytes in 0 blocks
+==1180== 
+==1180== For lists of detected and suppressed errors, rerun with: -s
+==1180== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c13.out
+[?2004l==1181== Memcheck, a memory error detector
+==1181== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1181== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1181== Command: ./c13.out
+==1181== 
+==1181== error calling PR_SET_PTRACER, vgdb might block
+==1181== 
+==1181== HEAP SUMMARY:
+==1181==     in use at exit: 19 bytes in 1 blocks
+==1181==   total heap usage: 3 allocs, 2 frees, 47 bytes allocated
+==1181== 
+==1181== 19 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1181==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1181==    by 0x10917E: main (c13.c:8)
+==1181== 
+==1181== LEAK SUMMARY:
+==1181==    definitely lost: 19 bytes in 1 blocks
+==1181==    indirectly lost: 0 bytes in 0 blocks
+==1181==      possibly lost: 0 bytes in 0 blocks
+==1181==    still reachable: 0 bytes in 0 blocks
+==1181==         suppressed: 0 bytes in 0 blocks
+==1181== 
+==1181== For lists of detected and suppressed errors, rerun with: -s
+==1181== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c13.out[13Pgcc -g -o c13.out c13.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c13.out c13.cvalgrind --leak-check=full ./c13.out
+[?2004l==1187== Memcheck, a memory error detector
+==1187== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1187== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1187== Command: ./c13.out
+==1187== 
+==1187== error calling PR_SET_PTRACER, vgdb might block
+==1187== 
+==1187== HEAP SUMMARY:
+==1187==     in use at exit: 0 bytes in 0 blocks
+==1187==   total heap usage: 3 allocs, 3 frees, 47 bytes allocated
+==1187== 
+==1187== All heap blocks were freed -- no leaks are possible
+==1187== 
+==1187== For lists of detected and suppressed errors, rerun with: -s
+==1187== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c1[K144[K.out c14.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c14.out c14.cvalgrind --leak-check=full ./c13.out[K[K[K[K[K[K14.out
+[?2004l==1193== Memcheck, a memory error detector
+==1193== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1193== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1193== Command: ./c14.out
+==1193== 
+==1193== error calling PR_SET_PTRACER, vgdb might block
+Positive integer:10
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D6B56: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193== 
+==1193== Use of uninitialised value of size 8
+==1193==    at 0x48BA33B: _itoa_word (_itoa.c:177)
+==1193==    by 0x48D5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193== 
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48BA34C: _itoa_word (_itoa.c:177)
+==1193==    by 0x48D5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193== 
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D6643: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193== 
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D5C85: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193== 
+Factorial 10 = 0
+==1193== 
+==1193== HEAP SUMMARY:
+==1193==     in use at exit: 0 bytes in 0 blocks
+==1193==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
+==1193== 
+==1193== All heap blocks were freed -- no leaks are possible
+==1193== 
+==1193== Use --track-origins=yes to see where uninitialised values come from
+==1193== For lists of detected and suppressed errors, rerun with: -s
+==1193== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c14.out[13Pgcc -g -o c14.out c14.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c14.out c14.cvalgrind --leak-check=full ./c14.out
+[?2004l==1199== Memcheck, a memory error detector
+==1199== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1199== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1199== Command: ./c14.out
+==1199== 
+
+==1199== error calling PR_SET_PTRACER, vgdb might block
+Positive integer:10
+Factorial 10 = 3628800
+==1199== 
+==1199== HEAP SUMMARY:
+==1199==     in use at exit: 0 bytes in 0 blocks
+==1199==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
+==1199== 
+==1199== All heap blocks were freed -- no leaks are possible
+==1199== 
+==1199== For lists of detected and suppressed errors, rerun with: -s
+==1199== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ c[Kgc [Kc -g -o c15.ouy[Kt c15.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c15.out c15.cvalgrind --leak-check=full ./c14.out[K[K[K[K[K5.out
+[?2004l==1205== Memcheck, a memory error detector
+==1205== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1205== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1205== Command: ./c15.out
+==1205== 
+==1205== error calling PR_SET_PTRACER, vgdb might block
+==1205== 
+==1205== HEAP SUMMARY:
+==1205==     in use at exit: 0 bytes in 0 blocks
+==1205==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==1205== 
+==1205== All heap blocks were freed -- no leaks are possible
+==1205== 
+==1205== For lists of detected and suppressed errors, rerun with: -s
+==1205== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) run
+[?2004lStarting program: [32m/mnt/c/Users/EMILIA/Desktop/ed/pa03/c15.out[m 
+warning: opening /proc/PID/mem file for lwp 1212.1212 failed: No such file or directory (2)
+Failed to read a valid object file image from memory.
+[Inferior 1 (process 1212) exited with code 01]
+[?2004h[?2004l[?2004h(gdb) quir[Kt
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[13Pgcc -g -o c15.out c15.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c15.out c15.c[10Pdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C
+[?2004l==1220== Memcheck, a memory error detector
+==1220== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1220== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1220== Command: ./c15.out
+==1220== 
+
+==1220== error calling PR_SET_PTRACER, vgdb might block
+==1220== 
+==1220== HEAP SUMMARY:
+==1220==     in use at exit: 0 bytes in 0 blocks
+==1220==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==1220== 
+==1220== All heap blocks were freed -- no leaks are possible
+==1220== 
+==1220== For lists of detected and suppressed errors, rerun with: -s
+==1220== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./c15.out[13Pgcc -g -o c15.out c15.c[10Pdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[13Pgcc -g -o c15.out c15.cvalgrind --leak-check=full ./c14.out[13Pgcc -g -o c14.out c14.cvalgrind --leak-check=full ./c14.out[13Pgcc -g -o c14.out c14.cvalgrind --leak-check=full ./c13.out[13Pgcc -g -o c13.out c13.cvalgrind --leak-check=full ./c13.out[13Pgcc -g -o c14.out c14.cvalgrind --leak-check=full ./c14.out[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgdb ./c15.outr[K
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) next
+[?2004lThe program is not being run.
+[?2004h(gdb) main
+[?2004lList of maintenance subcommands:
+
+[1mmaintenance [m[1magent[m -- Translate an expression into remote agent bytecode for tracing.
+[1mmaintenance [m[1magent-eval[m -- Translate an expression into remote agent bytecode for evaluation.
+[1mmaintenance [m[1magent-printf[m -- Translate an expression into remote agent bytecode for evaluation and display the bytecodes.
+[1mmaintenance [m[1mbtrace[m -- Branch tracing maintenance commands.
+[1mmaintenance [m[1mcheck[m -- Commands for checking internal gdb state.
+[1mmaintenance [m[1mcheck-psymtabs[m -- Check consistency of currently expanded psymtabs versus symtabs.
+[1mmaintenance [m[1mcheck-symtabs[m -- Check consistency of currently expanded symtabs.
+[1mmaintenance [m[1mcplus[m, [1mmaintenance [m[1mcp[m -- C++ maintenance commands.
+[1mmaintenance [m[1mdemangler-warning[m -- Give GDB a demangler warning.
+[m[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l[1mmaintenance [1mdeprecate[m -- Deprecate a command (for testing purposes).
+[1mmaintenance [m[1mdump-me[m -- Get fatal error; make debugger dump its core.
+[1mmaintenance [m[1mexpand-symtabs[m -- Expand symbol tables.
+[1mmaintenance [m[1mflush[m -- Maintenance command for flushing GDB internal caches.
+[1mmaintenance [m[1minfo[m, 
+   [1mmaintenance [m[1mi[m -- Commands for showing internal info about the program being debugged.
+[1mmaintenance [m[1minternal-error[m -- Give GDB an internal error.
+[1mmaintenance [m[1minternal-warning[m -- Give GDB an internal warning.
+[1mmaintenance [m[1mpacket[m -- Send an arbitrary packet to a remote target.
+[1mmaintenance [m[1mprint[m -- Maintenance command for printing GDB internal state.
+[1mmaintenance [m[1mselftest[m -- Run gdb's unit tests.
+[1mmaintenance [m[1mset[m -- Set GDB internal variables used by the GDB maintainer.
+[m[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l[1mmaintenance [1mshow[m -- Show GDB internal variables used by the GDB maintainer.
+[1mmaintenance [m[1mspace[m -- Set the display of space usage.
+[1mmaintenance [m[1mtest-options[m -- Generic command for testing the options infrastructure.
+[1mmaintenance [m[1mtime[m -- Set the display of time usage.
+[1mmaintenance [m[1mtranslate-address[m -- Translate a section name and address to a symbol.
+[1mmaintenance [m[1mundeprecate[m -- Undeprecate a command (for testing purposes).
+[1mmaintenance [m[1mwith[m -- Like "with", but works with "maintenance set" variables.
+
+Type "help maintenance" followed by maintenance subcommand name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+[?2004h(gdb) brak main[K[K[K[K[K[K[Keak main
+[?2004lBreakpoint 1 at [34m0x114f[m: file [32mc15.c[m, line 9.
+[?2004h(gdb) next
+[?2004lThe program is not being run.
+[?2004h(gdb) next
+[?2004lThe program is not being run.
+[?2004h(gdb) run
+[?2004lStarting program: [32m/mnt/c/Users/EMILIA/Desktop/ed/pa03/c15.out[m 
+warning: opening /proc/PID/mem file for lwp 1227.1227 failed: No such file or directory (2)
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x800113c
+
+[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1227] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[13Pgcc -g -o c15.out c15.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c15.out c15.c[10Pdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[13Pgcc -g -o c15.out c15.c[10Pdb ./c15.outcc -g -o c15.out c15.cvalgrind --leak-check=full ./c15.out[23Pgdb[C[C[C[C[C[C[C[C[C[Ccc -g -o c15.out c15.c[Kgcc -g -o c15.out c15.c[10Pdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[23Pgdb[C[C[C[C[C[C[C[C[C[C
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) break main
+[?2004lBreakpoint 1 at [34m0x114f[m: file [32mc15.c[m, line 9.
+[?2004h(gdb) break main[C[C[C[C[C[C[Kbreak main[K[K[K[K[K[K[K[K[K[Krun
+[?2004lStarting program: [32m/mnt/c/Users/EMILIA/Desktop/ed/pa03/c15.out[m 
+warning: opening /proc/PID/mem file for lwp 1241.1241 failed: No such file or directory (2)
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x800113c
+
+[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1241] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.outcc -g -o c15.out c15.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c15.out c15.c[10Pdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) break 12
+[?2004lBreakpoint 1 at [34m0x1176[m: file [32mc15.c[m, line 14.
+[?2004h(gdb) next
+[?2004lThe program is not being run.
+[?2004h(gdb) run
+[?2004lStarting program: [32m/mnt/c/Users/EMILIA/Desktop/ed/pa03/c15.out[m 
+warning: opening /proc/PID/mem file for lwp 1255.1255 failed: No such file or directory (2)
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x8001176
+
+[?2004h(gdb) bat[K[Kreak 14
+[?2004lNote: breakpoint 1 also set at pc [34m0x8001176[m.
+Breakpoint 2 at [34m0x8001176[m: file [32mc15.c[m, line 14.
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x8001176
+
+[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1255] will be killed.
+
+Quit anyway? (y or n) y
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.outcc -g -o c15.out c15.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ 
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o c15.out c15.c[10Pdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lThere is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lFor bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) 
+[?2004l[?2004h(gdb) break 12
+[?2004lBreakpoint 1 at [34m0x118c[m: file [32mc15.c[m, line 12.
+[?2004h(gdb) run
+[?2004lStarting program: [32m/mnt/c/Users/EMILIA/Desktop/ed/pa03/c15.out[m 
+warning: opening /proc/PID/mem file for lwp 1269.1269 failed: No such file or directory (2)
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x800118c
+
+[?2004h(gdb) brake [K[K[K[Keak 14
+[?2004lBreakpoint 2 at [34m0x80011af[m: file [32mc15.c[m, line 15.
+Warning:
+Cannot insert breakpoint 1.
+Cannot access memory at address 0x800118c
+Cannot insert breakpoint 2.
+Cannot access memory at address 0x80011af
+
+[?2004h(gdb) quit
+[?2004l[?2004hA debugging session is active.
+
+	Inferior 1 [process 1269] will be killed.
+
+Quit anyway? (y or n) quit[K[K[K[Ky
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lThere is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lFor bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) break 14
+[?2004lBreakpoint 1 at [34m0x11af[m: file [32mc15.c[m, line 15.
+[?2004h(gdb) quit
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lThere is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lFor bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) ba[Kreak 12
+[?2004lBreakpoint 1 at [34m0x118c[m: file [32mc15.c[m, line 12.
+[?2004h(gdb) quit
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.out
+[?2004l[35;1mGNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1[m
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lThere is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004lFor bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+[?2004h--Type <RET> for more, q to quit, c to continue without paging--
+[?2004l
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from [32m./c15.out[m...
+[?2004h(gdb) 
+[?2004l[?2004h(gdb) nexty[K
+[?2004lThe program is not being run.
+[?2004h(gdb) [K(gdb) [K(gdb) [K(gdb) quit
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -c[Kg -o 166[K[K[Kc[K15.out [K[K[K[K[K[K66[K.out c16.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 16.out c16.c[9Pdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.outcc -g -o c15.out c15.c[10Pdb ./c15.out[23@valgrind --leak-check=full[C[C[C[C[C[C[C[C[C[C[13Pgcc -g -o c15.out c15.c[10Pdb ./c15.outcc -g -o c15.out c15.cvalgrind --leak-check=full ./c15.out[K[K[K[K[K[K[K1.out[K[K[K[K6.out
+[?2004l==1295== Memcheck, a memory error detector
+==1295== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1295== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1295== Command: ./16.out
+==1295== 
+==1295== error calling PR_SET_PTRACER, vgdb might block
+==1295== 
+==1295== Process terminating with default action of signal 8 (SIGFPE)
+==1295==  Integer divide by zero at address 0x1002E7E491
+==1295==    at 0x10913B: actual_calc (c16.c:6)
+==1295==    by 0x109170: calc (c16.c:15)
+==1295==    by 0x109189: main (c16.c:20)
+==1295== 
+==1295== HEAP SUMMARY:
+==1295==     in use at exit: 0 bytes in 0 blocks
+==1295==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==1295== 
+==1295== All heap blocks were freed -- no leaks are possible
+==1295== 
+==1295== For lists of detected and suppressed errors, rerun with: -s
+==1295== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Floating point exception (core dumped)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./16.out[13Pgcc -g -o 16.out c16.c
+[?2004l[01m[Kc16.c:[m[K In function ‘[01m[Kactual_calc[m[K’:
+[01m[Kc16.c:12:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kreturn[m[K’ with no value, in function returning non-void
+   12 |     [01;35m[Kreturn[m[K;
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kc16.c:4:5:[m[K [01;36m[Knote: [m[Kdeclared here
+    4 | int [01;36m[Kactual_calc[m[K(int a, int b){
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 16.out c16.cvalgrind --leak-check=full ./16.out
+[?2004l==1301== Memcheck, a memory error detector
+==1301== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1301== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1301== Command: ./16.out
+==1301== 
+==1301== error calling PR_SET_PTRACER, vgdb might block
+==1301== 
+==1301== Process terminating with default action of signal 8 (SIGFPE)
+==1301==  Integer divide by zero at address 0x1002D7E634
+==1301==    at 0x10915F: actual_calc (c16.c:6)
+==1301==    by 0x1091CB: calc (c16.c:22)
+==1301==    by 0x1091E4: main (c16.c:27)
+==1301== 
+==1301== HEAP SUMMARY:
+==1301==     in use at exit: 0 bytes in 0 blocks
+==1301==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==1301== 
+==1301== All heap blocks were freed -- no leaks are possible
+==1301== 
+==1301== For lists of detected and suppressed errors, rerun with: -s
+==1301== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+Floating point exception (core dumped)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./16.out[13Pgcc -g -o 16.out c16.c
+[?2004l[01m[Kc16.c:[m[K In function ‘[01m[Kactual_calc[m[K’:
+[01m[Kc16.c:12:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kreturn[m[K’ with no value, in function returning non-void
+   12 |     [01;35m[Kreturn[m[K;
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kc16.c:4:5:[m[K [01;36m[Knote: [m[Kdeclared here
+    4 | int [01;36m[Kactual_calc[m[K(int a, int b){
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[Kc16.c:[m[K In function ‘[01m[Kcalc[m[K’:
+[01m[Kc16.c:24:5:[m[K [01;35m[Kwarning: [m[K‘[01m[Kreturn[m[K’ with no value, in function returning non-void
+   24 |     [01;35m[Kreturn[m[K;
+      |     [01;35m[K^~~~~~[m[K
+[01m[Kc16.c:17:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   17 | int [01;36m[Kcalc[m[K(){
+      |     [01;36m[K^~~~[m[K
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 16.out c16.cvalgrind --leak-check=full ./16.out
+[?2004l==1307== Memcheck, a memory error detector
+==1307== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1307== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1307== Command: ./16.out
+==1307== 
+==1307== error calling PR_SET_PTRACER, vgdb might block
+e impossivel dividir por zero==1307== 
+==1307== HEAP SUMMARY:
+==1307==     in use at exit: 0 bytes in 0 blocks
+==1307==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==1307== 
+==1307== All heap blocks were freed -- no leaks are possible
+==1307== 
+==1307== For lists of detected and suppressed errors, rerun with: -s
+==1307== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 19.out c19.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 19.out c19.cvalgrind --leak-check=full ./16.out[K[K[K[K[K9.out
+[?2004l==1313== Memcheck, a memory error detector
+==1313== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1313== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1313== Command: ./19.out
+==1313== 
+==1313== error calling PR_SET_PTRACER, vgdb might block
+enter a number:
+12
+==1313== Invalid write of size 1
+==1313==    at 0x48EF757: _IO_str_overflow (strops.c:133)
+==1313==    by 0x48EDEB3: _IO_default_xsputn (genops.c:399)
+==1313==    by 0x48EDEB3: _IO_default_xsputn (genops.c:370)
+==1313==    by 0x48D51CC: outstring_func (vfprintf-internal.c:239)
+==1313==    by 0x48D51CC: __vfprintf_internal (vfprintf-internal.c:1263)
+==1313==    by 0x48E1A08: __vsprintf_internal (iovsprintf.c:95)
+==1313==    by 0x48C09A7: sprintf (sprintf.c:30)
+==1313==    by 0x1092A5: printSum (c19.c:22)
+==1313==    by 0x1092DD: main (c19.c:28)
+==1313==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==1313== 
+==1313== 
+==1313== Process terminating with default action of signal 11 (SIGSEGV)
+==1313==  Access not within mapped region at address 0x0
+==1313==    at 0x48EF757: _IO_str_overflow (strops.c:133)
+==1313==    by 0x48EDEB3: _IO_default_xsputn (genops.c:399)
+==1313==    by 0x48EDEB3: _IO_default_xsputn (genops.c:370)
+==1313==    by 0x48D51CC: outstring_func (vfprintf-internal.c:239)
+==1313==    by 0x48D51CC: __vfprintf_internal (vfprintf-internal.c:1263)
+==1313==    by 0x48E1A08: __vsprintf_internal (iovsprintf.c:95)
+==1313==    by 0x48C09A7: sprintf (sprintf.c:30)
+==1313==    by 0x1092A5: printSum (c19.c:22)
+==1313==    by 0x1092DD: main (c19.c:28)
+==1313==  If you believe this happened as a result of a stack
+==1313==  overflow in your program's main thread (unlikely but
+==1313==  possible), you can try to increase the size of the
+==1313==  main thread stack using the --main-stacksize= flag.
+==1313==  The main thread stack size used in this run was 8388608.
+==1313== 
+==1313== HEAP SUMMARY:
+==1313==     in use at exit: 2,048 bytes in 2 blocks
+==1313==   total heap usage: 2 allocs, 0 frees, 2,048 bytes allocated
+==1313== 
+==1313== LEAK SUMMARY:
+==1313==    definitely lost: 0 bytes in 0 blocks
+==1313==    indirectly lost: 0 bytes in 0 blocks
+==1313==      possibly lost: 0 bytes in 0 blocks
+==1313==    still reachable: 2,048 bytes in 2 blocks
+==1313==         suppressed: 0 bytes in 0 blocks
+==1313== Reachable blocks (those to which a pointer was found) are not shown.
+==1313== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1313== 
+==1313== For lists of detected and suppressed errors, rerun with: -s
+==1313== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Segmentation fault (core dumped)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./19.out[13Pgcc -g -o 19.out c19.c
+[?2004l[01m[Kc19.c:[m[K In function ‘[01m[KprintSum[m[K’:
+[01m[Kc19.c:19:11:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kfgets[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   19 |     fgets([01;35m[Kline[m[K, 10, stdin);
+      |           [01;35m[K^~~~[m[K
+      |           [01;35m[K|[m[K
+      |           [01;35m[Kint *[m[K
+In file included from [01m[Kc19.c:1[m[K:
+[01m[K/usr/include/stdio.h:592:38:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar * restrict[m[K’ but argument is of type ‘[01m[Kint *[m[K’
+  592 | extern char *fgets ([01;36m[Kchar *__restrict __s[m[K, int __n, FILE *__restrict __stream)
+      |                     [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[Kc19.c:21:16:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Kstrtok[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   21 |         strtok([01;35m[Kline[m[K, "\n");
+      |                [01;35m[K^~~~[m[K
+      |                [01;35m[K|[m[K
+      |                [01;35m[Kint *[m[K
+In file included from [01m[Kc19.c:2[m[K:
+[01m[K/usr/include/string.h:356:39:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kchar * restrict[m[K’ but argument is of type ‘[01m[Kint *[m[K’
+  356 | extern char *strtok ([01;36m[Kchar *__restrict __s[m[K, const char *__restrict __delim)
+      |                      [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[Kc19.c:22:40:[m[K [01;35m[Kwarning: [m[Kpassing argument 1 of ‘[01m[Katoi[m[K’ from incompatible pointer type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wincompatible-pointer-types-Wincompatible-pointer-types]8;;[m[K]
+   22 |     sprintf(buf,"sum=%d",sum_to_n(atoi([01;35m[Kline[m[K)));
+      |                                        [01;35m[K^~~~[m[K
+      |                                        [01;35m[K|[m[K
+      |                                        [01;35m[Kint *[m[K
+In file included from [01m[Kc19.c:3[m[K:
+[01m[K/usr/include/stdlib.h:105:30:[m[K [01;36m[Knote: [m[Kexpected ‘[01m[Kconst char *[m[K’ but argument is of type ‘[01m[Kint *[m[K’
+  105 | extern int atoi ([01;36m[Kconst char *__nptr[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 19.out c19.cvalgrind --leak-check=full ./19.out
+[?2004l==1319== Memcheck, a memory error detector
+==1319== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1319== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1319== Command: ./19.out
+==1319== 
+==1319== error calling PR_SET_PTRACER, vgdb might block
+enter a number:
+12
+==1319== Invalid write of size 1
+==1319==    at 0x48EF757: _IO_str_overflow (strops.c:133)
+==1319==    by 0x48EDEB3: _IO_default_xsputn (genops.c:399)
+==1319==    by 0x48EDEB3: _IO_default_xsputn (genops.c:370)
+==1319==    by 0x48D51CC: outstring_func (vfprintf-internal.c:239)
+==1319==    by 0x48D51CC: __vfprintf_internal (vfprintf-internal.c:1263)
+==1319==    by 0x48E1A08: __vsprintf_internal (iovsprintf.c:95)
+==1319==    by 0x48C09A7: sprintf (sprintf.c:30)
+==1319==    by 0x1092A5: printSum (c19.c:22)
+==1319==    by 0x1092DD: main (c19.c:28)
+==1319==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==1319== 
+==1319== 
+==1319== Process terminating with default action of signal 11 (SIGSEGV)
+==1319==  Access not within mapped region at address 0x0
+==1319==    at 0x48EF757: _IO_str_overflow (strops.c:133)
+==1319==    by 0x48EDEB3: _IO_default_xsputn (genops.c:399)
+==1319==    by 0x48EDEB3: _IO_default_xsputn (genops.c:370)
+==1319==    by 0x48D51CC: outstring_func (vfprintf-internal.c:239)
+==1319==    by 0x48D51CC: __vfprintf_internal (vfprintf-internal.c:1263)
+==1319==    by 0x48E1A08: __vsprintf_internal (iovsprintf.c:95)
+==1319==    by 0x48C09A7: sprintf (sprintf.c:30)
+==1319==    by 0x1092A5: printSum (c19.c:22)
+==1319==    by 0x1092DD: main (c19.c:28)
+==1319==  If you believe this happened as a result of a stack
+==1319==  overflow in your program's main thread (unlikely but
+==1319==  possible), you can try to increase the size of the
+==1319==  main thread stack using the --main-stacksize= flag.
+==1319==  The main thread stack size used in this run was 8388608.
+==1319== 
+==1319== HEAP SUMMARY:
+==1319==     in use at exit: 2,048 bytes in 2 blocks
+==1319==   total heap usage: 2 allocs, 0 frees, 2,048 bytes allocated
+==1319== 
+==1319== LEAK SUMMARY:
+==1319==    definitely lost: 0 bytes in 0 blocks
+==1319==    indirectly lost: 0 bytes in 0 blocks
+==1319==      possibly lost: 0 bytes in 0 blocks
+==1319==    still reachable: 2,048 bytes in 2 blocks
+==1319==         suppressed: 0 bytes in 0 blocks
+==1319== Reachable blocks (those to which a pointer was found) are not shown.
+==1319== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==1319== 
+==1319== For lists of detected and suppressed errors, rerun with: -s
+==1319== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+Segmentation fault (core dumped)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ valgrind --leak-check=full ./19.out[13Pgcc -g -o 19.out c19.c
+[?2004l[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ gcc -g -o 19.out c19.cvalgrind --leak-check=full ./19.out
+[?2004l==1325== Memcheck, a memory error detector
+==1325== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1325== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1325== Command: ./19.out
+==1325== 
+==1325== error calling PR_SET_PTRACER, vgdb might block
+enter a number:
+12
+sum=78
+==1325== 
+==1325== HEAP SUMMARY:
+==1325==     in use at exit: 0 bytes in 0 blocks
+==1325==   total heap usage: 3 allocs, 3 frees, 2,068 bytes allocated
+==1325== 
+==1325== All heap blocks were freed -- no leaks are possible
+==1325== 
+==1325== For lists of detected and suppressed errors, rerun with: -s
+==1325== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+[?2004h]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa03[01;32maquila@DESKTOP-VMAQMJR[00m:[01;34m/mnt/c/Users/EMILIA/Desktop/ed/pa03[00m$ [K]0;aquila@DESKTOP-VMAQMJR: /mnt/c/Users/EMILIA/Desktop/ed/pa0

@@ -1,0 +1,66 @@
+aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ valgrind --leak-check=full ./c14.out
+==1193== Memcheck, a memory error detector
+==1193== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1193== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1193== Command: ./c14.out
+==1193==
+==1193== error calling PR_SET_PTRACER, vgdb might block
+Positive integer:10
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D6B56: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193==
+==1193== Use of uninitialised value of size 8
+==1193==    at 0x48BA33B: _itoa_word (_itoa.c:177)
+==1193==    by 0x48D5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193==
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48BA34C: _itoa_word (_itoa.c:177)
+==1193==    by 0x48D5B3D: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193==
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D6643: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193==
+==1193== Conditional jump or move depends on uninitialised value(s)
+==1193==    at 0x48D5C85: __vfprintf_internal (vfprintf-internal.c:1516)
+==1193==    by 0x48C081E: printf (printf.c:33)
+==1193==    by 0x10920D: main (c14.c:12)
+==1193==
+Factorial 10 = 0
+==1193==
+==1193== HEAP SUMMARY:
+==1193==     in use at exit: 0 bytes in 0 blocks
+==1193==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
+==1193==
+==1193== All heap blocks were freed -- no leaks are possible
+==1193==
+==1193== Use --track-origins=yes to see where uninitialised values come from
+==1193== For lists of detected and suppressed errors, rerun with: -s
+==1193== ERROR SUMMARY: 5 errors from 5 contexts (suppressed: 0 from 0)
+aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ gcc -g -o c14.out c14.c
+aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ valgrind --leak-check=full ./c14.out
+==1199== Memcheck, a memory error detector
+==1199== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1199== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1199== Command: ./c14.out
+==1199==
+
+==1199== error calling PR_SET_PTRACER, vgdb might block
+Positive integer:10
+Factorial 10 = 3628800
+==1199==
+==1199== HEAP SUMMARY:
+==1199==     in use at exit: 0 bytes in 0 blocks
+==1199==   total heap usage: 2 allocs, 2 frees, 2,048 bytes allocated
+==1199==
+==1199== All heap blocks were freed -- no leaks are possible
+==1199==
+==1199== For lists of detected and suppressed errors, rerun with: -s
+==1199== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
