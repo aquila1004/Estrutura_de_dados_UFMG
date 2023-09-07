@@ -1,0 +1,48 @@
+1. Analise o código e tente identificar eventuais erros.
+apesar de nao ter erro de vazamento de memoria há um erro de lógica porque, faz-se uma funcao para atribuir 1, mas no processo
+por conta de de declarar a = a + 1 dentro do loop sempre retorna o valor de 2, o que não era o esperado de acordo com codigo
+
+2. Utilizando as ferramentas, confirme a sua avaliação ou identifique problemas.
+==230== Memcheck, a memory error detector
+==230== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==230== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==230== Command: ./c15.out
+==230==
+==230== error calling PR_SET_PTRACER, vgdb might block
+2
+2
+2
+2
+==230==
+==230== HEAP SUMMARY:
+==230==     in use at exit: 0 bytes in 0 blocks
+==230==   total heap usage: 1 allocs, 1 frees, 512 bytes allocated
+==230==
+==230== All heap blocks were freed -- no leaks are possible
+==230==
+==230== For lists of detected and suppressed errors, rerun with: -s
+==230== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+3. Corrija o código, removendo o(s) erro(s) identificado(s).
+removendo a = a + 1 de dentro do loop ja  resolve o problema.
+
+4. Utilizando novamente as ferramentas, verifique a remoção do erro.
+==241== Memcheck, a memory error detector
+==241== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==241== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==241== Command: ./c15.out
+==241==
+==241== error calling PR_SET_PTRACER, vgdb might block
+2
+3
+4
+5
+==241==
+==241== HEAP SUMMARY:
+==241==     in use at exit: 0 bytes in 0 blocks
+==241==   total heap usage: 1 allocs, 1 frees, 512 bytes allocated
+==241==
+==241== All heap blocks were freed -- no leaks are possible
+==241==
+==241== For lists of detected and suppressed errors, rerun with: -s
+==241== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
