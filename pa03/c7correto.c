@@ -7,7 +7,7 @@ int main() {
     for(uint8_t i = 0; i < 26; i++) {
         *(alphabet + i) = 'A' + i;
     }
-    *(alphabet + 25) = '\0'; //null-terminate the string?
+    *(alphabet + 25) = '\0'; 
 
     free(alphabet);
     return 0;

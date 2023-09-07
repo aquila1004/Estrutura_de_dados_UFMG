@@ -1,3 +1,7 @@
+1. Analise o código e tente identificar eventuais erros.
+O problema está relacionado ao uso da variável buf sem alocar memória para ela
+
+2. Utilizando as ferramentas, confirme a sua avaliação ou identifique problemas.
 ==1313== Memcheck, a memory error detector
 ==1313== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==1313== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
@@ -53,8 +57,10 @@ enter a number:
 ==1313== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
 Segmentation fault (core dumped)
 
+3. Corrija o código, removendo o(s) erro(s) identificado(s).
+Para solucionar eu aloquei memoria antes de usar a variavel buf e liberei depois dela ser utilizada no codigo
 
-aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ valgrind --leak-check=full ./19.out
+4. Utilizando novamente as ferramentas, verifique a remoção do erro.
 ==1325== Memcheck, a memory error detector
 ==1325== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==1325== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info

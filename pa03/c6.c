@@ -17,7 +17,6 @@ int main() {
     List* array = calloc(1, sizeof(List));
     array->data = calloc(10, sizeof(int32_t));
     array = resizeArray(array);
-
     free(array->data);
     free(array);
     return 0;

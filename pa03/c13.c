@@ -7,8 +7,9 @@ int main()
 
   p = (char *) malloc(19);
   p = (char *) malloc(12);
-  p = (char *) malloc(16);
   free(p);
+  p = (char *) malloc(16);
+ 
 
   return 0;
 }

@@ -1,4 +1,7 @@
-aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ valgrind --leak-check=full ./c12.out
+1. Analise o código e tente identificar eventuais erros.
+erro de incializacao do x 
+
+2. Utilizando as ferramentas, confirme a sua avaliação ou identifique problemas.
 ==1156== Memcheck, a memory error detector
 ==1156== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
 ==1156== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
@@ -26,7 +29,10 @@ aquila@DESKTOP-VMAQMJR:/mnt/c/Users/EMILIA/Desktop/ed/pa03$ valgrind --leak-chec
 ==1162== Command: ./c12.out
 ==1162==
 ==1162== error calling PR_SET_PTRACER, vgdb might block
-X is zero==1162==
+3. Corrija o código, removendo o(s) erro(s) identificado(s).
+inicializando x com 0
+
+4. Utilizando novamente as ferramentas, verifique a remoção do erro.
 ==1162== HEAP SUMMARY:
 ==1162==     in use at exit: 0 bytes in 0 blocks
 ==1162==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
