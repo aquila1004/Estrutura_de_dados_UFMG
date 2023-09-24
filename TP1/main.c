@@ -16,6 +16,7 @@ char pop(StackNode** top);
 void removeSpaces(char* str);
 bool isOperator(char c);
 bool evaluateExpression(const char* expression, const char* values);
+
 int main(int argc, char* argv[]) {
     if (argc != 4) {
         printf("Uso: %s <opcao> <expressao_logica> <valores>\n", argv[0]);
@@ -115,20 +116,24 @@ void evaluateOperator(StackNode** operatorStack, StackNode** operandStack) {
     bool result = false;
 
     if (isOperator(op)) {
-        bool operand2 = pop(operandStack);
-        bool operand1 = pop(operandStack);
+        if (op == '!') {
+            bool operand = pop(operandStack);
+            result = evaluateUnary(op, operand);
+        } else {
+            bool operand2 = pop(operandStack);
+            bool operand1 = pop(operandStack);
 
-        if (op == '|') {
-            result = operand1 || operand2;
-        } else if (op == '&') {
-            result = operand1 && operand2;
+            if (op == '|') {
+                result = operand1 || operand2;
+            } else if (op == '&') {
+                result = operand1 && operand2;
+            }
         }
-    } else if (op == '!') {
-        result = evaluateUnary(op, pop(operandStack));
     }
 
     push(operandStack, result);
 }
+
 
 bool evaluateExpression(const char* expression, const char* values) {
     StackNode* operatorStack = NULL;
@@ -155,6 +160,16 @@ bool evaluateExpression(const char* expression, const char* values) {
                 evaluateOperator(&operatorStack, &operandStack);
             }
             push(&operatorStack, expression[i]);
+        } else if (expression[i] == '!') {
+            if (expression[i + 1] == '(') {
+                // Handle negation of an expression
+                push(&operatorStack, expression[i]);
+            } else {
+                // Handle negation of a single value
+                bool valueToNegate = expression[i + 1] == '1';
+                push(&operandStack, !valueToNegate);
+                i++; // Skip the next character (the value)
+            }
         } else if (expression[i] >= 'a' && expression[i] <= 'z') {
             int value = values[valIndex] - '0';
             push(&operandStack, value);
