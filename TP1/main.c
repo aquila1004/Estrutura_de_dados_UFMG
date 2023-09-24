@@ -100,7 +100,7 @@ void removeSpaces(char* str) {
 
 // Verifica se um caractere é um operador lógico
 bool isOperator(char c) {
-    return (c == '!' || c == '&' || c == '|');
+    return (c == '~' || c == '&' || c == '|');
 }
 
 bool evaluateBinary(char op, bool operand1, bool operand2) {
@@ -108,7 +108,7 @@ bool evaluateBinary(char op, bool operand1, bool operand2) {
 }
 
 bool evaluateUnary(char op, bool operand) {
-    return (op == '!') ? !operand : false;
+    return (op == '~') ? !operand : false;
 }
 
 void evaluateOperator(StackNode** operatorStack, StackNode** operandStack) {
@@ -116,7 +116,7 @@ void evaluateOperator(StackNode** operatorStack, StackNode** operandStack) {
     bool result = false;
 
     if (isOperator(op)) {
-        if (op == '!') {
+        if (op == '~') {
             bool operand = pop(operandStack);
             result = evaluateUnary(op, operand);
         } else {
@@ -160,7 +160,7 @@ bool evaluateExpression(const char* expression, const char* values) {
                 evaluateOperator(&operatorStack, &operandStack);
             }
             push(&operatorStack, expression[i]);
-        } else if (expression[i] == '!') {
+        } else if (expression[i] == '~') {
             if (expression[i + 1] == '(') {
                 // Handle negation of an expression
                 push(&operatorStack, expression[i]);
