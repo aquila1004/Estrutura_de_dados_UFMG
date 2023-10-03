@@ -49,7 +49,18 @@ void evaluateOperator(StackNode** operatorStack, StackNode** operandStack) {
     push(operandStack, result);
 }
 
+int getPrecedence(char op) {
+    if (op == '|') return 1;
+    if (op == '&') return 2;
+    if (op == '~') return 3;
+    return 0; // Operadores desconhecidos têm precedência 0 (ou seja, o mais baixo).
+}
 
+bool operatorStackIsEmpty(StackNode* top) {
+    return top == NULL;
+}
+
+// Função para avaliar a expressão com a ordem de precedência desejada
 bool evaluateExpression(const char* expression, const char* values) {
     StackNode* operatorStack = NULL;
     StackNode* operandStack = NULL;
@@ -69,9 +80,9 @@ bool evaluateExpression(const char* expression, const char* values) {
         } else if (expression[i] == '0' || expression[i] == '1') {
             push(&operandStack, expression[i] == '1');
         } else if (isOperator(expression[i])) {
-            while (operatorStack != NULL && operatorStack->data != '(' &&
-                   isOperator(operatorStack->data) &&
-                   (expression[i] <= operatorStack->data)) {
+            while (!operatorStackIsEmpty(operatorStack) &&
+                   operatorStack->data != '(' &&
+                   getPrecedence(expression[i]) <= getPrecedence(operatorStack->data)) {
                 evaluateOperator(&operatorStack, &operandStack);
             }
             push(&operatorStack, expression[i]);
@@ -99,4 +110,3 @@ bool evaluateExpression(const char* expression, const char* values) {
 
     return pop(&operandStack);
 }
-
