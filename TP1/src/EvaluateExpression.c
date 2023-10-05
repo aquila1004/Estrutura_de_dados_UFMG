@@ -53,14 +53,13 @@ int getPrecedence(char op) {
     if (op == '|') return 1;
     if (op == '&') return 2;
     if (op == '~') return 3;
-    return 0; // Operadores desconhecidos têm precedência 0 (ou seja, o mais baixo).
+    return 0;
 }
 
 bool operatorStackIsEmpty(StackNode* top) {
     return top == NULL;
 }
 
-// Função para avaliar a expressão com a ordem de precedência desejada
 bool evaluateExpression(const char* expression, const char* values) {
     StackNode* operatorStack = NULL;
     StackNode* operandStack = NULL;
