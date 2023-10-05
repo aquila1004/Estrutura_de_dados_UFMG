@@ -5,10 +5,13 @@
 #include <string.h>
 #include <ctype.h>
 
-#define MAX_COMBINATIONS 1000                               // Defina um tamanho máximo para o vetor
-#define MAX_EXPRESSION_LENGTH 1000                          // Defina um tamanho máximo para as expressões
-char combinations[MAX_COMBINATIONS][MAX_EXPRESSION_LENGTH]; // Suponha um tamanho máximo para as expressões
+#define MAX_COMBINATIONS 1000
+#define MAX_EXPRESSION_LENGTH 1000
+char combinations[MAX_COMBINATIONS][MAX_EXPRESSION_LENGTH];
 int numCombinations = 0;
+bool resultados[MAX_COMBINATIONS];                                   
+char combinacoesVerdadeiras[MAX_COMBINATIONS][MAX_EXPRESSION_LENGTH]; 
+int numCombinationsVerdadeiras = 0;
 
 void addCombination(const char *combination)
 {
@@ -28,20 +31,19 @@ void generateAllCombinations(char *values, int index, char *currentCombination)
 {
     if (index == strlen(values))
     {
-        addCombination(currentCombination); // Adicione a combinação atual ao vetor
+        addCombination(currentCombination);
         return;
     }
 
     if (isalpha(values[index]))
     {
-        char original = values[index]; // Salva o caractere original
+        char original = values[index];
         currentCombination[index] = '0';
         generateAllCombinations(values, index + 1, currentCombination);
 
         currentCombination[index] = '1';
         generateAllCombinations(values, index + 1, currentCombination);
 
-        // Restaura o caractere original
         currentCombination[index] = original;
     }
     else
@@ -93,19 +95,17 @@ int main(int argc, char *argv[])
             printf("\n0\n");
         }
     }
-    else if (strcmp(option, "-p") == 0)
+    else if (strcmp(option, "−s") == 0)
     {
-        char currentCombination[MAX_EXPRESSION_LENGTH];          // Declare uma string temporária para armazenar a combinação atual
-        memset(currentCombination, '\0', MAX_EXPRESSION_LENGTH); // Inicialize a string com nulos
-        // variavle auxilixiar para armazenar expression original
+        char currentCombination[MAX_EXPRESSION_LENGTH];
+        memset(currentCombination, '\0', MAX_EXPRESSION_LENGTH);
+
         char expressionOriginal[MAX_EXPRESSION_LENGTH];
         strcpy(expressionOriginal, expression);
         generateAllCombinations(values, 0, currentCombination);
 
-        // Exibir todas as combinações armazenadas
         for (int i = 0; i < numCombinations; i++)
         {
-            printf("%s\n", combinations[i]);
             for (int j = 0; expression[j] != '\0'; j++)
             {
                 if (isdigit(expression[j]) && isdigit(expression[j + 1]))
@@ -120,22 +120,38 @@ int main(int argc, char *argv[])
                     expression[j] = combinations[i][index];
                 }
             }
-            // volta a expressoa orginal para a proxima combinação
-            printf("combinacao %s\n", combinations[i]);
-            printf("expresio pos %s\n", expression);
-            
-            printf("expresio pos %s\n", expression);
-            
             bool result = evaluateExpression(expression, combinations[i]);
-            strcpy(expression, expressionOriginal);
+
+            resultados[i] = result;
             if (result)
             {
-                printf("\n1\n");
+                strcpy(combinacoesVerdadeiras[numCombinationsVerdadeiras], combinations[i]);
+                numCombinationsVerdadeiras++;
             }
-            else
+
+            strcpy(expression, expressionOriginal);
+        }
+
+        bool peloMenosUmVerdadeiro = false;
+        for (int i = 0; i < numCombinations; i++)
+        {
+            if (resultados[i])
             {
-                printf("\n0\n");
+                peloMenosUmVerdadeiro = true;
+                break;
             }
+        }
+        if (peloMenosUmVerdadeiro)
+        {
+            printf("1 ");
+            for (int i = 0; i < numCombinationsVerdadeiras; i++)
+            {
+                printf("%s  ", combinacoesVerdadeiras[i]);
+            }
+        }
+        else
+        {
+            printf("0\n");
         }
     }
     else
