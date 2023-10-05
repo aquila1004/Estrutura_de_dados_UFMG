@@ -88,11 +88,11 @@ int main(int argc, char *argv[])
 
         if (result)
         {
-            printf("\n1\n");
+            printf("1\n");
         }
         else
         {
-            printf("\n0\n");
+            printf("0\n");
         }
     }
     else if (strcmp(option, "−s") == 0)
@@ -148,6 +148,7 @@ int main(int argc, char *argv[])
             {
                 printf("%s  ", combinacoesVerdadeiras[i]);
             }
+            printf("\n");
         }
         else
         {
