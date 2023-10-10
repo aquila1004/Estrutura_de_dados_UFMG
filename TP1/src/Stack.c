@@ -17,8 +17,11 @@ void push(StackNode** top, char data) {
 
 // Pop um valor da pilha
 char pop(StackNode** top) {
-    if (*top == NULL) {
+
+    if (*top == NULL ) {
         printf("Erro: Pilha vazia\n");
+        ///printf("%d\n", *top);
+        
         exit(EXIT_FAILURE);
     }
     StackNode* temp = *top;
