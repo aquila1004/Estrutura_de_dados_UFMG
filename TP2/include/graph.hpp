@@ -4,15 +4,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/*  Você pode inserir os includes necessários para que sua classe funcione.
- * Nenhuma outra alteração neste arquivo é permitida
- */
-
-
-/*  Você deve implementar struct s_grafo como um TAD que irá armazenar
- * os dados de um grafo. Lembrando que a estratégia utilizada deve ser uma
- * lista de adjacencia e deve ser implementada como uma lista encadeada.
- */
 struct Node {
     int data;
     struct Node* next;
@@ -24,7 +15,9 @@ struct s_grafo {
 };
 typedef struct s_grafo Grafo;
 
-
+typedef struct {
+    int* colors;
+} CoresVertices;
 
 
 Grafo* NovoGrafo();
